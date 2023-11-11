@@ -1,6 +1,7 @@
-const { inventory } = require("./data");
-function lastcar(caratpos) {
-  const carat = inventory.filter((carpos) => carpos.id == caratpos);
+function lastcar(inventory) {
+  const carat = inventory.reduce((acc, curr) => {
+    return curr;
+  });
   return carat;
 }
 module.exports = { lastcar };
